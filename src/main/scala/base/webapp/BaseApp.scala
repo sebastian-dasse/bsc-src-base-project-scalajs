@@ -32,6 +32,19 @@ object BaseApp extends JSApp {
   }
 
   def setupUI(): Unit = {
+//    val htmlText = "<!DOCTYPE html>" + ScalaTagsExample.helloScalaTags()
+//    val htmlText = ScalaTagsExample.helloScalaTags()
+//    val htmlText = ScalaTagsExample.helloScalaTagsWithStyle()
+    val htmlText = ScalaTagsExample.helloScalaTagsWithFlowAndFunctions()
+//    val htmlText = ScalaTagsExample.helloScalaTagsSanatized()
+//    val htmlText = ScalaTagsExample.helloScalaTagsUnSanatized()
+//    val htmlText = ScalaTagsExample.helloScalaTagsLayouts()
+//    val htmlText = ScalaTagsExample.helloScalaTagsInheritance()
+//    val htmlText = ScalaTagsExample.helloScalaTagsInheritance()
+
+    println(htmlText)
+    dom.document.body.innerHTML = htmlText.toString()
+
 //    jQuery("#click-me-button").click(addClickedMessage _)
     jQuery("""<button type="button">Click me!</button>""")
       .click(addClickedMessage _)
