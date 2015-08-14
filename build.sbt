@@ -24,8 +24,10 @@ jsDependencies += RuntimeDOM
 
 testFrameworks += new TestFramework("utest.runner.Framework")
 
+/* So the main() is auto-detected and needs not to be included in the html */
 persistLauncher in Compile := true
 
+/* No main() for tests */
 persistLauncher in Test := false
 
 EclipseKeys.withSource := true

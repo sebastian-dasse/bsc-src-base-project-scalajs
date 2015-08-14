@@ -17,7 +17,7 @@ object BaseApp extends JSApp {
     jQuery(setupUI _)
 //    setupUI() // why not directly call the function?
   }
-  
+
 //  def appendPar(targetNode: dom.Node, text: String): Unit = {
 //    val parNode = document.createElement("p")
 //    val textNode = document.createTextNode(text)

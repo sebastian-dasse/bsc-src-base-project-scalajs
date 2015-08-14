@@ -1,4 +1,4 @@
-<!DOCYTPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,16 @@
   <script type="text/javascript" src="../scala-js-base-project-jsdeps.js"></script>
 
   <!-- Include Scala.js compiled code -->
-  <script type="text/javascript" src="../scala-js-base-project-opt.js"></script>
+  <script type="text/javascript" src="../scala-js-base-project-fastopt.js"></script>
 
   <!-- Run base.webapp.BaseApp.main() -->
   <script type="text/javascript" src="../scala-js-base-project-launcher.js"></script>
+
+  <!-- Integrate with workbench -->
+  <script type="text/javascript" src="/workbench.js"></script>
+
+  <script type="text/javascript">
+    console.log(base.webapp.BaseApp.main);
+  </script>
 </body>
 </html>
