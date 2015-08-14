@@ -1,6 +1,8 @@
 /* Turn this project into a Scala.js project by importing these settings */
 enablePlugins(ScalaJSPlugin)
 
+workbenchSettings
+
 name := "Scala.js Base Project"
 
 version := "1.0"
@@ -29,5 +31,12 @@ persistLauncher in Compile := true
 
 /* No main() for tests */
 persistLauncher in Test := false
+
+/* For the workbench */
+bootSnippet := "base.webapp.BaseApp().main();"
+
+/* Choose one of the two workbench modes */
+//updateBrowsers <<= updateBrowsers.triggeredBy(fastOptJS in Compile)
+refreshBrowsers <<= refreshBrowsers.triggeredBy(fastOptJS in Compile)
 
 EclipseKeys.withSource := true
