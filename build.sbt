@@ -29,7 +29,7 @@ libraryDependencies ++= Seq(
 skip in packageJSDependencies := false
 
 /* Make the DOM available for the runtime, that is for Rhino or Node.js. */
-jsDependencies += RuntimeDOM
+jsDependencies in Test += RuntimeDOM
 
 testFrameworks += new TestFramework("utest.runner.Framework")
 
